@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Pharmacy Care Admin view</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+     <style type="text/css">
+        .style1
+        {
+            width: 956px;
+            height: 208px;
+            margin-right: 0px;
+        }
+        </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+<body style="padding: 0; margin: 0; background-image: url('images/Background.jpg')"
+    alink="#ffffff">
+
+    <form id="Form1" runat="server">
+
+
+    <div class="page">
+        <div class="header">
+            
+           
+            <div class="clear hideSkiplink">
+                <img alt="head" class="style1" 
+                    src="images/bluebackground.jpg" />
+                </br>
+                </br>
+
+</br>
+
+
+      
+            
+                &nbsp;&nbsp;&nbsp;
+
+      
+              
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+                <asp:Button ID="AdOrderBtn" runat="server" Text="Orders" BackColor="White" 
+                    Font-Bold="True" Font-Size="Medium" Height="30px" Width="100px" 
+                    PostBackUrl="~/AdminOrders.aspx" />
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+                <asp:Button ID="AdDrugBtn" runat="server" Text="Drugs" BackColor="White" 
+                    Font-Bold="True" Font-Size="Medium" Height="30px" Width="100px" 
+                    PostBackUrl="~/AdminDrug.aspx" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                
+                <asp:Button ID="AdDiseasBtn" runat="server" Text="Diseaes" BackColor="White" 
+                    Font-Bold="True" Font-Size="Medium" Height="30px" Width="100px" 
+                    PostBackUrl="~/AdminDisease.aspx" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="AdUsersBtn" runat="server" Text="Users"  BackColor="White" 
+                    Font-Bold="True" Font-Size="Medium" Height="30px" Width="100px" 
+                    PostBackUrl="~/AdminUsers.aspx"/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="AdInventBtn" runat="server" Text="Inventory"  BackColor="White" 
+                    Font-Bold="True" Font-Size="Medium" Height="30px" Width="100px" 
+                    PostBackUrl="~/AdminInventory.aspx"/>
+
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                     <asp:Button ID="AdEnqueryBtn" runat="server" Text="Enquery" BackColor="White" 
+                    Font-Bold="True" Font-Size="Medium" Height="30px" Width="100px" 
+                    PostBackUrl="~/AdminEnquery.aspx" />
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="AdLogoutBtn" runat="server" Font-Bold="True" 
+                    Font-Size="Large" ForeColor="White" PostBackUrl="~/index.aspx">Log Out</asp:LinkButton>
+
+            </div>
+        </div>
+
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+               
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Copyright © 2011</p>
+    </div>
+    </form>
+    <!-- coded by Maria Bahammam -->
+</body>
+</html>
